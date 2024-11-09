@@ -46,3 +46,9 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+.card-image {
+    width: 100px; /* Set fixed width */
+    height: 100px; /* Set fixed height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 5px; /* Optional: to match the card's border radius */
+}
