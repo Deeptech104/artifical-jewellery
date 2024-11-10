@@ -3,16 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artificial Jewelry Shop</title>
-    <!-- Link to Bootstrap CSS -->
+    <title>DeepAura Antique Jewelry</title>
+
+    <!-- Link to Google Fonts for a Vintage Font Style -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Link to Bootstrap CSS for Layout -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Link to Custom CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #f8f4e1; /* Off white background */
+            color: #333;
+            padding-top: 56px; /* Prevents content from being hidden behind fixed navbar */
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #2c1f13; /* Dark Brown */
+        }
+
+        .navbar-brand, .navbar-nav .nav-link {
+            font-family: 'Playfair Display', serif;
+            color: #a17a39 !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #e5c07b;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-color: #4e3629; /* Dark Antique Brown */
+            color: #f1e6b0;
+            padding: 120px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            background-color: #d1a057; /* Antique Gold */
+            border: none;
+            font-family: 'Merriweather', serif;
+        }
+
+        .btn-primary:hover {
+            background-color: #b88e47;
+        }
+
+        /* Product Card Styles */
+        .card {
+            border: 1px solid #d1a057;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fef2d7; /* Light Antique Gold */
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #4e3629;
+        }
+
+        .card-text {
+            color: #6a4e32;
+            font-size: 1.1rem;
+        }
+
+        .card-img-top {
+            border-bottom: 1px solid #d1a057;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #3e2b19; /* Dark Brown */
+            color: #d1a057;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .social-media a img {
+            width: 40px;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-media a:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .card {
+                margin-bottom: 20px;
+            }
+        }
+
+    </style>
 </head>
 <body>
 
 <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="#">DeepAura Jewels</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,17 +148,17 @@
 </nav>
 
 <!-- Hero Section -->
-<section id="home" class="hero-section text-center text-light d-flex align-items-center" style="background-color: #343a40; height: 80vh;">
+<section id="home" class="hero-section">
     <div class="container">
-        <h1>Welcome to Our Artificial Jewelry Shop</h1>
-        <p>Discover the finest artificial jewelry pieces for all occasions.</p>
+        <h1>Welcome to DeepAura Jewelry Shop</h1>
+        <p>Discover the finest handcrafted jewelry with timeless elegance for every occasion.</p>
         <a href="#products" class="btn btn-primary mt-4">Shop Now</a>
     </div>
 </section>
 
 <!-- Products Section -->
 <section id="products" class="container my-5">
-    <h2 class="text-center mb-4">Our Products</h2>
+    <h2 class="text-center mb-4" style="font-family: 'Playfair Display', serif;">Our Timeless Collection</h2>
     <div class="row">
         <!-- Product Card 1 -->
         <div class="col-md-4 mb-4">
@@ -68,46 +187,43 @@
         <!-- Product Card 3 -->
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img  src="imag/earring2.jpg" class="card-img-top" alt="Jewelry Piece 3">
+                <img src="imag/earring2.jpg" class="card-img-top" alt="Jewelry Piece 3">
                 <div class="card-body">
-                    <h5 class="card-title">Elegant Necklace</h5>
-                    <p class="card-text">$19.99</p>
+                    <h5 class="card-title">Vintage Bracelet</h5>
+                    <p class="card-text">$49.99</p>
                     <a href="#" class="btn btn-outline-primary">Add to Cart</a>
                 </div>
             </div>
         </div>
-        
-        <!-- Product Card 4 -->
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <img src="imag/neck2.jpg" class="card-img-top" alt="Jewelry Piece 4">
-                <div class="card-body">
-                    <h5 class="card-title">Classic Earrings</h5>
-                    <p class="card-text">$19.99</p>
-                    <a href="#" class="btn btn-outline-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
         <!-- Product Card 5 -->
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="imag/4.jpg" class="card-img-top" alt="Jewelry Piece 5">
+                <img src="imag/bracelate.jpg" class="card-img-top" alt="Jewelry Piece 4">
                 <div class="card-body">
-                    <h5 class="card-title">Classic Earrings</h5>
-                    <p class="card-text">$19.99</p>
+                    <h5 class="card-title">Vintage Bracelet</h5>
+                    <p class="card-text">$49.99</p>
                     <a href="#" class="btn btn-outline-primary">Add to Cart</a>
                 </div>
             </div>
         </div>
-
-        <!-- Product Card 6 -->
+        <!-- Product Card 3 -->
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="imag/bracelate.jpg" class="card-img-top" alt="Jewelry Piece 6">
+                <img src="imag/neck2.jpg" class="card-img-top" alt="Jewelry Piece 3">
                 <div class="card-body">
-                    <h5 class="card-title">Infinity Silver Bracelet</h5>
-                    <p class="card-text">$19.99</p>
+                    <h5 class="card-title">Vintage Bracelet</h5>
+                    <p class="card-text">$49.99</p>
+                    <a href="#" class="btn btn-outline-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <!-- Product Card 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="imag/4.jpg" class="card-img-top" alt="Jewelry Piece 3">
+                <div class="card-body">
+                    <h5 class="card-title">Vintage Bracelet</h5>
+                    <p class="card-text">$49.99</p>
                     <a href="#" class="btn btn-outline-primary">Add to Cart</a>
                 </div>
             </div>
@@ -115,31 +231,30 @@
     </div>
 </section>
 
-
 <!-- Contact Section -->
 <section id="contact" class="bg-dark text-light py-5">
     <div class="container">
-        <h3 class="text-center">Get in Touch</h3>
-        <p class="text-center">Contact us for more information.</p>
+        <h3 class="text-center" style="font-family: 'Playfair Display', serif;">Get in Touch</h3>
+        <p class="text-center">For inquiries or custom orders, contact us directly!</p>
 
         <!-- Social Media Links -->
-        <div class="text-center mt-4">
+        <div class="text-center mt-4 social-media">
             <a href="https://www.facebook.com/profile.php?id=61557710879300" target="_blank" aria-label="Facebook"><img src="socialmida/icons8-facebook-logo.svg" alt="Facebook"></a>
             <a href="https://www.instagram.com/blac.kbodyradiation/" target="_blank" aria-label="Instagram"><img src="socialmida/icons8-instagram-logo.svg" alt="Instagram"></a>
             <a href="https://www.linkedin.com/in/deepak-sharma-615212287/" target="_blank" aria-label="LinkedIn"><img src="socialmida/icons8-linkedin.svg" alt="LinkedIn"></a>
-            <a href="https://www.youtube.com/@DeepTech-r8w" target="_blank" aria-label="youtube"><img src="socialmida/icons8-youtube (1).svg" alt="youtube"></a>
+            <a href="https://www.youtube.com/@DeepTech-r8w" target="_blank" aria-label="YouTube"><img src="socialmida/icons8-youtube (1).svg" alt="YouTube"></a>
             <a href="https://wa.me/+923432527807" target="_blank" aria-label="WhatsApp"><img src="socialmida/icons8-whatsapp.svg" alt="WhatsApp"></a>
         </div>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-dark text-center text-light py-3">
-    <p>&copy; 2024 Artificial Jewelry Shop. All Rights Reserved.</p>
+<footer class="footer">
+    <p>&copy; 2024 DeepAura Antique Jewelry. All Rights Reserved.</p>
 </footer>
 
 <!-- Bootstrap JS and Custom Script -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+
 </body>
 </html>
