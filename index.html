@@ -152,6 +152,7 @@
                     <img src="imag/download.png" class="card-img-top" alt="Jewelry Piece 1">
                     <div class="card-body">
                         <h5 class="card-title">Elegant Necklace</h5>
+                        
                         <p class="card-text">$29.99</p>
                         <a href="#" class="btn btn-outline-primary add-to-cart" data-product-id="1" data-product-name="Elegant Necklace" data-product-price="29.99">Add to Cart</a>
                     </div>
@@ -337,6 +338,33 @@
         document.getElementById('cartModal').addEventListener('hidden.bs.modal', () => {
             document.body.style.overflow = 'auto';
         });
+        // Disable right-click on the entire page
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+// Disable F12, Ctrl+Shift+I, and Ctrl+U
+document.addEventListener('keydown', function(e) {
+    // Disable F12
+    if (e.key === 'F12') {
+        e.preventDefault();
+    }
+    // Disable Ctrl+Shift+I or Ctrl+Shift+J
+    if (e.ctrlKey && (e.key === 'I' || e.key === 'J') && e.shiftKey) {
+        e.preventDefault();
+    }
+    // Disable Ctrl+U (View Source)
+    if (e.ctrlKey && e.key === 'U') {
+        e.preventDefault();
+    }
+});
+        // Block inspect element on specific page (for example, "Sensitive Page")
+if (window.location.href.includes('sensitive-page')) {
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+}
+
+
     </script>
 </body>
 
