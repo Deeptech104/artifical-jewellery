@@ -16,6 +16,38 @@ body {
     body {
     user-select: none;  /* Prevent text selection */
 }
+    .search {
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px; /* Adjust width as needed */
+}
+
+.search-btn {
+  background-color: #333; /* Change to your desired background color */
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+  background-color: #555; /* Hover color */
+}
+
+.search-btn svg {
+  fill: #F9DB78; /* Adjust the icon color */
+}
+
       
 }
 
