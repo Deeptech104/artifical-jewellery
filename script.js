@@ -29,7 +29,7 @@ function updateCartDisplay() {
         
         cartItemElement.innerHTML = `
             <div class="d-flex align-items-center">
-                <img src="${item.image}" alt="${item.name}" style="width: 40px; height: 40px; margin-right: 10px;">
+                <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px;   border-radius: 50px;  box-shadow: 0 4px 10px rgba(0, 0.1, 0.2, 0.5); margin-right: 10px;">
                 <div>
                     <h6>${item.name} (x${item.quantity})</h6>
                     <p>$${(item.price * item.quantity).toFixed(2)}</p>
