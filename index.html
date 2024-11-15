@@ -122,6 +122,13 @@
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <!-- Search Box -->
+<div class="inputBox_container">
+    <svg class="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" alt="search icon">
+        <path d="M46.599 46.599a4.498 4.498 0 0 1-6.363 0l-7.941-7.941C29.028 40.749 25.167 42 21 42 9.402 42 0 32.598 0 21S9.402 0 21 0s21 9.402 21 21c0 4.167-1.251 8.028-3.342 11.295l7.941 7.941a4.498 4.498 0 0 1 0 6.363zM21 6C12.717 6 6 12.714 6 21s6.717 15 15 15c8.286 0 15-6.714 15-15S29.286 6 21 6z"></path>
+    </svg>
+    <input class="inputBox" id="inputBox" type="text" placeholder="Search For Products">
+</div>
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="view-cart" data-bs-toggle="modal" data-bs-target="#cartModal">
                             <img height="27px" src="socialmida/bag.svg" alt="">
@@ -333,7 +340,9 @@
 
                 cartItemElement.innerHTML = `
                     <div class="d-flex align-items-center">
-                        <img src="${item.image}" alt="${item.name}" style="width: 40px; height: 40px; margin-right: 10px;">
+                        <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; border-radius: 50px; 
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);margin-right: 10px;">
                         <div>
                             <h6>${item.name} (x${item.quantity})</h6>
                             <p>$${(item.price * item.quantity).toFixed(2)}</p>
@@ -392,6 +401,15 @@
                 updateCartDisplay();  // Update the cart display
             }
         });
+        // Search functionality
+document.getElementById('inputBox').addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();
+    const productCards = document.querySelectorAll('.card');
+    productCards.forEach(card => {
+        const productName = card.querySelector('.card-title').textContent.toLowerCase();
+        card.style.display = productName.includes(searchTerm) ? 'block' : 'none';
+    });
+});
     </script>
 </body>
 
