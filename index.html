@@ -410,6 +410,43 @@ document.getElementById('inputBox').addEventListener('input', function() {
         card.style.display = productName.includes(searchTerm) ? 'block' : 'none';
     });
 });
+          // Payment functionality
+        $(document).ready(function() {
+            const totalAmount = parseFloat($('#cart-total-price').text());
+
+            // Function to generate QR code
+            function generateQRCode(amount) {
+                $('#qrCode').empty(); // Clear previous QR code
+                if (amount > 0) {
+                    const qrData = `https://example.com/payment?amount=${amount}`; // Replace with your payment URL
+                    $('#qrCode').qrcode({
+                        width: 128,
+                        height: 128,
+                        text: qrData
+                    });
+                }
+            }
+
+            // EasyPaisa button click
+            $('#easyPaisaBtn').click(function() {
+                const amount = parseFloat($('#amountInput').val());
+                if (amount === totalAmount) {
+                    generateQRCode(amount);
+                } else {
+                    alert(`Please enter the total amount: ${totalAmount} PKR`);
+                }
+            });
+
+            // JazzCash button click
+            $('#jazzCashBtn').click(function() {
+                const amount = parseFloat($('#amountInput').val());
+                if (amount === totalAmount) {
+                    generateQRCode(amount);
+                } else {
+                    alert(`Please enter the total amount: ${totalAmount} PKR`);
+                }
+            });
+        });
     </script>
 </body>
 
