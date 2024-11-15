@@ -305,6 +305,27 @@
             </div>
         </div>
     </div>
+    <!-- Payment Modal -->
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="paymentModalLabel">Payment Options</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Select Payment Method:</h6>
+                    <button class="btn btn-success" id="easyPaisaBtn">EasyPaisa</button>
+                    <button class="btn btn-warning" id="jazzCashBtn">JazzCash</button>
+                    <div id="qrCode"></div>
+                    <input type="number" id="amountInput" placeholder="Enter Amount" class="form-control mt-3" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
