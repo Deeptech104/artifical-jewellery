@@ -1,439 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeepAura Antique Jewelry</title>
-
-    <!-- Link to Google Fonts for a Vintage Font Style -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
-
-    <!-- Link to Bootstrap CSS for Layout -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Merriweather', serif;
-            background-color: #f8f4e1;
-            color: #333;
-            padding-top: 56px;
-        }
-
-        /* Navbar Styles */
-        .navbar {
-            background-color: #2c1f13;
-            padding: 10px 20px;
-        }
-
-        .navbar-brand {
-            font-family: 'Playfair Display', serif;
-            color: #a17a39 !important;
-            font-size: 1.5rem;
-        }
-
-        .navbar-nav .nav-link {
-            font-family: 'Playfair Display', serif;
-            color: #a17a39 !important;
-            padding: 8px 15px;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #e5c07b;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background-color: #4e3629;
-            color: #f1e6b0;
-            padding: 120px 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-            text-align: center;
-        }
-
-        .hero-section h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-        }
-
-        .hero-section p {
-            font-size: 1.2rem;
-        }
-
-        .btn-primary {
-            background-color: #d1a057;
-            border: none;
-            font-family: 'Merriweather', serif;
-        }
-
-        .btn-primary:hover {
-            background-color: #b88e47;
-        }
-
-        /* Product Card Styles */
-        .card {
-            border: 1px solid #d1a057;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: #fef2d7;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .footer {
-            background-color: #3e2b19;
-            color: #d1a057;
-            padding: 30px 0;
-            text-align: center;
-        }
-
-        .social-media a img {
-            width: 40px;
-            margin: 0 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-media a:hover img {
-            transform: scale(1.1);
-        }
-    </style>
+    <title>My Portfolio</title>
 </head>
-
 <body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">DeepAura Jewels</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class=" nav-item"><a class="nav-link" href="#products">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <div class="inputBox_container">
-
-                        <input class="inputBox" id="inputBox" type="text" placeholder="Search For Products">
-                    </div>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" id="view-cart" data-bs-toggle="modal" data-bs-target="#cartModal">
-                            <img height="27px" src="socialmida/bag.svg" alt="">
-                            <span id="cart-count"></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <h1>Welcome to DeepAura Jewellery Shop</h1>
-            <p>Discover the finest handcrafted jewelry with timeless elegance for every occasion.</p>
-            <a href="#products" class="btn btn-primary mt-4">Shop Now</a>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="container my-5">
-        <h2 class="text-center mb-4" style="font-family: 'Playfair Display', serif;">Our Timeless Collection</h2>
-        <div class="row">
-            <!-- Product 1 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="imag/download.png" class="card-img-top" alt="Jewelry Piece 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Elegant Necklace</h5>
-                        <p class="card-text">$29.99</p>
-                        <a href="#" class="btn btn-outline-primary add-to-cart" data-product-id="1"
-                            data-product-name="Elegant Necklace" data-product-price="29.99"
-                            data-product-image="imag/download.png">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="imag/bangle1.jpg" class="card-img-top" alt="Jewelry Piece 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Bangle</h5>
-                        <p class="card-text">$30.99</p>
-                        <a href="#" class="btn btn-outline-primary add-to-cart" data-product-id="2"
-                            data-product-name="Bangle" data-product-price="30.99"
-                            data-product-image="imag/bangle1.jpg">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="imag/earring2.jpg" class="card-img-top" alt="Jewelry Piece 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Diamond Ring</h5>
-                        <p class="card-text">$49.99</p>
-                        <a href="#" class="btn btn-outline-primary add-to-cart" data-product-id="3"
-                            data-product-name="Diamond Ring" data-product-price="49.99"
-                            data-product-image="imag/earring2.jpg">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="imag/necklace.jpg" class="card-img-top" alt="Jewelry Piece 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Gold Earrings</h5>
-                        <p class="card-text">$39.99</p>
-                        <a href="#" class="btn btn-outline-primary add-to-cart" data-product-id="4"
-                            data-product-name="Gold Earrings" data-product-price="39.99"
-                            data-product-image="imag/necklace.jpg">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 5 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="imag/neck2.jpg" class="card-img-top" alt="Jewelry Piece 5">
-                    <div class="card-body">
-                        <h5 class="card-title">Silver Bracelet</h5>
-                        <p class="card-text">$34.99</p>
-                        <a href="#" class="btn btn-outline-primary add-to-cart" data-product-id="5"
-                            data-product-name="Silver Bracelet" data-product-price="34.99"
-                            data-product-image="imag/neck2.jpg">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 6 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="imag/bangle3.jpg" class="card-img-top" alt="Jewelry Piece 6">
-                    <div class="card-body">
-                        <h5 class="card-title">Vintage Bangle</h5>
-                        <p class="card-text">$25.99</p>
-                        <a href="#" class="btn btn-outline-primary add-to-cart" data-product-id="6"
-                            data-product-name="Vintage Bangle" data-product-price="25.99"
-                            data-product-image="imag/bangle3.jpg">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- Cart Modal -->
-    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div id="cart-items-list"></div>
-                    <hr>
-                    <div class="d-flex justify-content-between">
-                        <h5>Total Price: $<span id="cart-total-price">0.00</span></h5>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="checkout-btn" data-bs-target="#checkoutModal" data-bs-toggle="modal">Checkout</button>
-                </div>
-            </div>
-        </div>
+    <div class="image-container">
+        <img src="WhatsApp Image 2024-08-29 at 17.49.14_53953a41.jpg">
     </div>
     
-    <!-- Checkout Modal -->
-    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="checkoutModalLabel">Checkout</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="checkout-form" method="POST" action="checkout.php">
-                        <div class="mb-3">
-                            <label for="fullName" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="fullName" name="fullName" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="address" class="form-label">Shipping Address</label>
-                            <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="totalPrice" class="form-label">Total Price</label>
-                            <input type="hidden" id="totalPrice" name="totalPrice">
-                            <p id="totalPriceDisplay"></p>
-                        </div>
-                        <div class="mb-3">
-                            <label for="productNames" class="form-label">Products</label>
-                            <input type="hidden" id="productNames" name="productNames">
-                            <p id="productNamesDisplay"></p>
-                        </div>
-                        <div class="mb-3">
-                            <label for="paymentMethod" class="form-label">Payment Method</label>
-                            <select class="form-control" id="paymentMethod" name="paymentMethod" required>
-                                <option value="creditCard">Credit Card</option>
-                                <option value="paypal">PayPal</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Complete Purchase</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <section id="contact">
-        <div class="container">
+    <h1>DEEPAK SHARMA</h1>
+    <h2>Welcome To My Portfolio</h2>
 
-            <div class="text-center mt-4 social-media">
-                <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><img
-                        src="socialmida/icons8-facebook-logo.svg" alt="Facebook"></a>
-                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><img
-                        src="socialmida/icons8-instagram-logo.svg" alt="Instagram"></a>
-                <a href="https://www.linkedin.com/in/deepak-sharma-615212287/" target="_blank"
-                    aria-label="LinkedIn"><img src="socialmida/icons8-linkedin.svg" alt="LinkedIn"></a>
-                <a href="https://www.youtube.com/@DeepTech-r8w" target="_blank" aria-label="YouTube"><img
-                        src="socialmida/icons8-youtube (1).svg" alt="YouTube"></a>
-                <a href="https://wa.me/+923432527807" target="_blank" aria-label="WhatsApp"><img
-                        src="socialmida/icons8-whatsapp.svg" alt="WhatsApp"></a>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li> <!-- Added Projects link -->
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a class="contact" href="#contact"><button>Contact</button></a>
+    </header>
+    
+    <section id="home">
+        <h1>Home</h1>
+        <p>Hello! I am Deepak Sharma, a passionate calisthenics and home workout enthusiast with over five years of hands-on experience. My passion lies in helping people achieve their fitness goals without the need for expensive gym memberships or equipment. Here, you can explore my work, learn more about my background, and get in touch with me.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm Deepak Sharma, a Computer Science student.</p>
+        <p>In my free time, I enjoy calisthenics exercises and running, which help me stay strong mentally and physically. Feel free to reach out if you want to collaborate or just say hi!</p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p>
+            <strong style="color:rgb(92,92,192)">School:</strong> I completed my schooling at AL Fareed Public High School Tandojam in 2019.
+        </p>
+        <p>
+            <strong style="color: rgb(92, 92, 192);">College:</strong> I completed my engineering degree at Government Degree College Tandojam in 2022.
+        </p>
+        <p>
+            <strong style="color:rgb(92, 92, 192);">Current Education:</strong> I am pursuing a degree in Computer Science at GC University Hyderabad. My education has provided me with a strong foundation in Python and web development skills.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>HTML, CSS, JS, Python, SQL, GitHub for Version Control</p>
+        <h3>Certificates</h3>
+        <ul class="certificates">
+            <li>
+                <img src="certificates/1705756696599.jpeg" alt="Certificate">
+            </li>
+        </ul>
+    </section>
+
+    <section id="projects"> <!-- New Projects Section -->
+        <h2>Projects</h2>
+        <div class="project-container">
+            <div class="project">
+                <h3>scientific-calculator</h3>
+                <p>My first project of scientific-calculator using html css j.s .</p>
+                <ul class="certificates">
+                    <li>
+                        <img src="certificates/Screenshot 2024-11-22 182325.png" alt="Certificate">
+                    </li>
+                </ul>
+                <button><a href=" https://deepaksharma104.github.io/scientific-calculator/" target="_blank">View Project</a></button>
             </div>
+            <div class="project">
+                <h3>Project Title 2</h3>
+                <p>online jewellery shop using html css js php and mysql.</p>
+                <div class="project_video">
+                 <video src="video/Screen Recording 2024-11-22 181103.mp4" controls muted> </video>
+                </div>
+                <button><a href="https://deepaura.great-site.net" target="_blank">View Project</a></button>
+            </div>
+            <!-- Add more projects as needed -->
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <section class="social-media">
+        <h2>Connect with Me</h2>
+        <a href="https://www.facebook.com/profile.php?id=61557710879300" target="_blank" aria-label="Facebook "><img src="icon/icons8-facebook (1).svg" alt="Facebook"></a>
+        <a href="https://www.instagram.com/blac.kbodyradiation/" target="_blank" aria-label="Instagram"><img src="icon/icons8-instagram.svg" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/deepak-sharma-615212287/" target="_blank" aria-label="LinkedIn"><img src="icon/icons8-linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.youtube.com/@DeepTech-r8w" target="_blank" aria-label="YouTube"><img src="icon/icons8-youtube.svg" alt="YouTube"></a>
+        <a href="https://wa.me/+923432527807" target="_blank" aria-label="WhatsApp"><img src="icon/icons8-whatsapp.svg" alt="WhatsApp"></a>
+    </section>
 
-        <p>&copy; 2024 DeepAura Jewelry. All Rights Reserved.</p>
-    </footer>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-qrcode/1.0/jquery.qrcode.min.js"></script>
-
-    <script>
-        // Cart functionality
-        let cart = [];
-
-        // Function to update the cart display
-        function updateCartDisplay() {
-            const cartItemsList = document.getElementById('cart-items-list');
-            cartItemsList.innerHTML = '';  // Clear current cart display
-            let totalPrice = 0;
-
-            cart.forEach(item => {
-                const cartItemElement = document.createElement('div');
-                cartItemElement.classList.add('d-flex', 'justify-content-between', 'align-items-center', 'mb-3');
-
-                cartItemElement.innerHTML = `
-                    <div class="d-flex align-items-center">
-                        <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; border-radius: 50px; 
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);margin-right: 10px;">
-                        <div>
-                            <h6>${item.name} (x${item.quantity})</h6>
-                            <p>$${(item.price * item.quantity).toFixed(2)}</p>
-                        </div>
-                    </div>
-                    <button class="btn btn-danger btn-sm remove-item" data-product-id="${item.id}">Remove</button>
-                `;
-                cartItemsList.appendChild(cartItemElement);
-                totalPrice += item.price * item.quantity;
-            });
-
-            document.getElementById('cart-total-price').textContent = totalPrice.toFixed(2);
-            updateCartCount();  // Update cart count at the top
-        }
-
-        // Update cart count display
-        function updateCartCount() {
-            const cartCount = document.getElementById('cart-count');
-            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            cartCount.textContent = totalItems > 0 ? totalItems : '';
-        }
-
-        // Handle adding items to the cart
-        document.querySelectorAll('.add-to-cart').forEach(button => {
-            button.addEventListener('click', event => {
-                event.preventDefault();
-                const productId = event.target.getAttribute('data-product-id');
-                const productName = event.target.getAttribute('data-product-name');
-                const productPrice = parseFloat(event.target.getAttribute('data-product-price'));
-                const productImage = event.target.getAttribute('data-product-image');
-
-                // Check if the product is already in the cart
-                const existingItem = cart.find(item => item.id === productId);
-
-                if (existingItem) {
-                    existingItem.quantity += 1;
-                } else {
-                    cart.push({
-                        id: productId,
-                        name: productName,
-                        price: productPrice,
-                        quantity: 1,
-                        image: productImage
-                    });
-                }
-
-                updateCartDisplay();  // Update the cart display
-            });
-        });
-
-        // Remove item from the cart
-        document.addEventListener('click', event => {
-            if (event.target.classList.contains('remove-item')) {
-                const productId = event.target.getAttribute('data-product-id');
-                cart = cart.filter(item => item.id !== productId);  // Remove the item from the cart
-                updateCartDisplay();  // Update the cart display
-            }
-        });
-
-        // Search functionality
-        document.getElementById('inputBox').addEventListener('input', function () {
-            const searchTerm = this.value.toLowerCase();
-            const productCards = document.querySelectorAll('.card');
-            productCards.forEach(card => {
-                const productName = card.querySelector('.card-title').textContent.toLowerCase();
-                card.style.display = productName.includes(searchTerm) ? 'block' : 'none';
-            });
-        });
-   //purchas
-        document.getElementById('checkout-btn').addEventListener('click', function () {
-        const totalPrice = document.getElementById('cart-total-price').textContent;
-        const productNames = cart.map(item => item.name).join(', ');
-
-        document.getElementById('totalPrice').value = totalPrice;
-        document.getElementById('totalPriceDisplay').textContent = '$' + totalPrice;
-        
-        document.getElementById('productNames').value = productNames;
-        document.getElementById('productNamesDisplay').textContent = productNames;
-    });
-    </script>
-    <script src="script.js"></script>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you would like to get in touch, please feel free to drop me a message or reach out through any of the social media links above. Looking forward to connecting with you!</p>
+    </section>
+    
+    <h1>Thanks for visiting</h1>
 </body>
-
 </html>
